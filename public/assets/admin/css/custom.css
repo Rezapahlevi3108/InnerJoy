@@ -1,0 +1,15 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+.innerjoyMain{
+    background-color: #669A8E !important;
+}
+
+.borderBottomColor{
+    border-bottom: 1px solid #669A8E !important;
+}
+
+.sideBarHover:hover{
+    background-color: #428172 !important;
+}
