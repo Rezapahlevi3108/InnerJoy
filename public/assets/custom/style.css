@@ -70,3 +70,7 @@
 .margin-top-128 {
     margin-top: 128px;
 }
+
+.card {
+    border-radius: 12px !important;
+}

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,6 @@ Route::get('admin/profile',[AdminController::class,'profile'])->name('admin.prof
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('user/dashboard',[UserController::class,'index'])->name('user.dashboard');
