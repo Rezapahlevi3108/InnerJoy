@@ -6,11 +6,15 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    function index(){
+    function index() {
         return view('user.pages.dashboard');
     }
 
-    function profile(){
+    function profile() {
         return view('user.pages.profile');
+    }
+
+    function post() {
+        return view('user.pages.post');
     }
 }
