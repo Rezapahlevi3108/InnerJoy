@@ -83,3 +83,7 @@
 .padding-bottom-66 {
     padding-bottom: 66px;
 }
+
+.card {
+    border-radius: 12px !important;
+}
