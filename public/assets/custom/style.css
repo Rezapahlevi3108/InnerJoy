@@ -28,12 +28,16 @@
 }
 
 /* Font Size */
-.font-size-30 {
-    font-size: 30px;
-}
-
 .font-size-68 {
     font-size: 68px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-30 {
+    font-size: 30px;
 }
 
 .font-size-18 {
@@ -69,4 +73,13 @@
 /* Margin */
 .margin-top-128 {
     margin-top: 128px;
+}
+
+/* Padding */
+.padding-top-66 {
+    padding-top: 66px;
+}
+
+.padding-bottom-66 {
+    padding-bottom: 66px;
 }
