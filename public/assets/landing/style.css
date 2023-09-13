@@ -1,0 +1,89 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none !important;
+    color: #424545;
+}
+
+/* Color */
+.color-primary-1 {
+    color: #669A8E;
+}
+
+.color-primary-2 {
+    color: #2A6877;
+}
+
+.color-primary-3 {
+    color: #424545;
+}
+
+/* Background Color */
+.bg-primary-1 {
+    background-color: #669A8E;
+}
+
+/* Font */
+.font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/* Font Size */
+.font-size-30 {
+    font-size: 30px;
+}
+
+.font-size-68 {
+    font-size: 68px;
+}
+
+.font-size-18 {
+    font-size: 18px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+/* Font Weight */
+.font-weight-600 {
+    font-weight: 600;
+}
+
+.font-weight-400 {
+    font-weight: 400;
+}
+
+/* Line Height */
+.line-height-76 {
+    line-height: 76px;
+}
+
+/* Margin */
+.margin-top-128 {
+    margin-top: 128px;
+}
+
+/* Button */
+.btn-primary-green {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+}
+
+.btn-primary-white {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 2px solid #669A8E;
+}
+
+.btn-secondary-green {
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: none;
+}
+
+.btn-secondary-white {
+    padding: 12px 20px;
+    border-radius: 50px;
+    border: 2px solid #669A8E;
+}
