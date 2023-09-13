@@ -23,3 +23,4 @@ Route::get('/', function () {
 
 
 Route::get('user/dashboard',[UserController::class,'index'])->name('user.dashboard');
+Route::get('user/profile',[UserController::class,'profile'])->name('user.profile');

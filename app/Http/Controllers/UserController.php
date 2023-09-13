@@ -9,4 +9,8 @@ class UserController extends Controller
     function index(){
         return view('user.pages.dashboard');
     }
+
+    function profile(){
+        return view('user.pages.profile');
+    }
 }
