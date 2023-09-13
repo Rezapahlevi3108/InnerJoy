@@ -10,8 +10,8 @@
                 <a class="nav-link font-size-18 font-weight-400 me-md-4" href="#">Tentang</a>
                 <a class="nav-link font-size-18 font-weight-400" href="#">Kontak</a>
             </div>
-            <x-button.secondary-green class="nav-link font-size-12 font-weight-400 d-block mx-auto mx-md-2 me-md-2 mb-2 mb-md-0" onclick="location.href = '/project'">Login</x-button.secondary-green>
-            <x-button.secondary-green class="nav-link font-size-12 font-weight-400 d-block mx-auto mx-md-0" onclick="location.href = '/project'">Register</x-button.secondary-green>
+            <x-button.secondary-green class="font-size-12 font-weight-400 d-block mx-auto mx-md-2 me-md-2 mb-2 mb-md-0" onclick="location.href = '{{ route('login') }}'">Login</x-button.secondary-green>
+            <x-button.secondary-green class="font-size-12 font-weight-400 d-block mx-auto mx-md-0" onclick="location.href = '{{ route('register') }}'">Register</x-button.secondary-green>
         </div>
     </div>
 </nav>

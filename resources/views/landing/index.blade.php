@@ -59,7 +59,7 @@
                                     <label for="exampleInputPassword1" class="form-label">Email Address</label>
                                     <input type="text" class="form-control" id="exampleInputPassword1">
                                 </div>
-                                <x-button.secondary-green class="nav-link font-size-14 font-weight-400 w-100" onclick="location.href = '/project'">Send</x-button.secondary-green>
+                                <x-button.secondary-green class="font-size-14 font-weight-400 w-100" onclick="location.href = '/project'">Send</x-button.secondary-green>
                             </form>
                         </div>
                     </div>
