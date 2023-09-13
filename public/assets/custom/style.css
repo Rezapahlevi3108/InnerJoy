@@ -4,6 +4,11 @@
     color: #424545;
 }
 
+/* Font */
+.font-fredoka {
+    font-family: 'Fredoka', sans-serif;
+}
+
 /* Color */
 .color-primary-1 {
     color: #669A8E;
@@ -20,11 +25,6 @@
 /* Background Color */
 .bg-primary-1 {
     background-color: #669A8E;
-}
-
-/* Font */
-.font-fredoka {
-    font-family: 'Fredoka', sans-serif;
 }
 
 /* Font Size */
@@ -44,6 +44,14 @@
     font-size: 16px;
 }
 
+.font-size-14 {
+    font-size: 14px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
 /* Font Weight */
 .font-weight-600 {
     font-weight: 600;
@@ -61,29 +69,4 @@
 /* Margin */
 .margin-top-128 {
     margin-top: 128px;
-}
-
-/* Button */
-.btn-primary-green {
-    padding: 12px 20px;
-    border-radius: 12px;
-    border: none;
-}
-
-.btn-primary-white {
-    padding: 12px 20px;
-    border-radius: 12px;
-    border: 2px solid #669A8E;
-}
-
-.btn-secondary-green {
-    padding: 12px 20px;
-    border-radius: 50px;
-    border: none;
-}
-
-.btn-secondary-white {
-    padding: 12px 20px;
-    border-radius: 50px;
-    border: 2px solid #669A8E;
 }
