@@ -9,4 +9,8 @@ class PostingController extends Controller
     function index($id) {
         return view('posting.pages.posting');
     }
+
+    function beranda() {
+        return view('posting.pages.beranda');
+    }
 }

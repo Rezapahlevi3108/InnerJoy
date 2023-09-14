@@ -26,6 +26,7 @@ Route::get('admin/profile',[AdminController::class,'profile'])->name('admin.prof
 
 
 Route::get('posting/{id}',[PostingController::class,'index'])->name('posting');
+Route::get('beranda',[PostingController::class,'beranda'])->name('beranda');
 
 Route::prefix('user')->group(function(){
     Route::controller(UserController::class)->group(function(){

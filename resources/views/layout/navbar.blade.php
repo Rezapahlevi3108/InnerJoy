@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto text-center">
-                <a class="nav-link font-size-18 font-weight-400 me-md-4" href="#">Beranda</a>
+                <a class="nav-link font-size-18 font-weight-400 me-md-4" href="{{ route('beranda') }}">Beranda</a>
                 <a class="nav-link font-size-18 font-weight-400 me-md-4" href="#">Tentang</a>
                 <a class="nav-link font-size-18 font-weight-400" href="#">Kontak</a>
             </div>
