@@ -1,8 +1,8 @@
-@extends('user.layout.main')
+@extends('layout.main')
 
-@section('contents')
+@section('content')
     <div class="container my-5">
-        <div class="row">
+        <div class="row my-5 pt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -76,13 +76,16 @@
                             </div>
                             <small class="text-danger">*semus field WAJIB DIISI!</small>
                             <div class="form-group mb-3">
-                                <button type="button" class="btn btn-primary" id="send">Simpan</button>
+                                <x-button.primary-green>
+                                    Simpan
+                                </x-button.primary-green>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
     @endsection
 
     @push('custom-script')

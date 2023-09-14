@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PostingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
@@ -25,3 +26,5 @@ Route::get('admin/profile',[AdminController::class,'profile'])->name('admin.prof
 Route::get('user/dashboard',[UserController::class,'index'])->name('user.dashboard');
 Route::get('user/profile',[UserController::class,'profile'])->name('user.profile');
 Route::get('user/post',[UserController::class,'post'])->name('user.post');
+
+Route::get('posting/{id}',[PostingController::class,'index'])->name('posting');

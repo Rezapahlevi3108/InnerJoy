@@ -1,8 +1,8 @@
-@extends('user.layout.main')
+@extends('layout.main')
 
-@section('contents')
+@section('content')
     <div class="container my-5">
-        <div class="row">
+        <div class="row my-5 pt-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4"></div>
@@ -49,13 +49,17 @@
             <div class="row">
                 @for ($i = 0; $i < 9; $i++)
                     <div class="col-md-3 col-6 my-3">
+                        <a href="{{ route('posting', ['id'=>1]) }}">
                         <x-card.rounded see="123" like="50" title="Yang Terdalam" btn="Detail"
-                            img="{{ asset('assets/user/img/lost_home.jpg') }}">
+                            img="{{ asset('assets/user/img/lost_home.jpg') }}" >
                             Dia pernah ada, rasanya mebekas di sini. Sulit hilang dan mustahil sirna. Antara ada dan
                             tiada...
                         </x-card.rounded>
+                                                    
+                    </a>
                     </div>
                 @endfor
             </div>
         </div>
-    @endsection
+    </div>
+ @endsection
