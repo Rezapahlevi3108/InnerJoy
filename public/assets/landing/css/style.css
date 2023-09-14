@@ -1,0 +1,35 @@
+.nav-link:hover {
+    color: #669A8E;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid #669A8E;
+    transform: scaleX(0);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(0.5);
+    transition: 0.2s linear;
+}
+
+.bg-linear {
+    background: linear-gradient(100deg, rgba(201, 228, 222, 0.60) -36.88%, rgba(206, 228, 224, 0.46) 21.99%, rgba(208, 228, 224, 0.41) 30.82%, rgba(223, 227, 231, 0.00) 102.68%);
+}
+
+.card-contact-us {
+    border: none;
+    border-radius: 21px;
+    width: 450px;
+}
+
+.footer {
+    background-color: #2F383B;
+    padding: 120px 0;
+}
+
+.line {
+    border-bottom: 3px solid #ffffff;
+    width: 60px;
+}

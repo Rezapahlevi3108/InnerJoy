@@ -28,12 +28,16 @@
 }
 
 /* Font Size */
-.font-size-30 {
-    font-size: 30px;
-}
-
 .font-size-68 {
     font-size: 68px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-30 {
+    font-size: 30px;
 }
 
 .font-size-18 {
@@ -69,6 +73,32 @@
 /* Margin */
 .margin-top-128 {
     margin-top: 128px;
+}
+
+.margin-top-76 {
+    margin-top: 76px;
+}
+
+.margin-bottom-80 {
+    margin-bottom: 80px;
+}
+
+/* Padding */
+.padding-top-66 {
+    padding-top: 66px;
+}
+
+.padding-bottom-66 {
+    padding-bottom: 66px;
+}
+
+.padding-top-140 {
+    padding-top: 140px;
+}
+
+.padding-left-right-100 {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
 }
 
 .card {

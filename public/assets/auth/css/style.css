@@ -1,0 +1,26 @@
+.form {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+@media (min-width: 992px) {
+    .form {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+.text-option{
+    width: 100%; 
+    color: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid #ced4da; 
+    line-height: 0.1em;
+    text-align: center;
+}
+
+.text-option span {
+    color: #757575;
+    font-size: 14px;
+    background:#fff; 
+    padding: 0 50px;
+}
