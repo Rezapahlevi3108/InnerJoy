@@ -3,10 +3,11 @@
 @section('content')
     <div class="container my-5">
         <div class="row">
-            <h1 class="text-center">post</h1>
-            <form action="{{ route('user.storePost') }}" class="text-center" method="POST" enctype="multipart/form-data">
+            <h3 class="text-center">Edit Post</h3>
+            <form action="{{ route('user.storeEditPost') }}" class="text-center" method="POST" enctype="multipart/form-data">
                 @csrf
-                <img src="{{ asset('assets/user/img/cover.jpg') }}" id="preview" style="object-fit: cover;height:400px;width:100%;" class="img-fluid" alt="cover-bg">
+                <input type="text" name="id" value="{{$data->id}}" class="d-none">
+                <img src="{{ asset('images/'.$data->cover) }}" id="preview" style="object-fit: cover;height:400px;width:100%;" class="img-fluid" alt="cover-bg">
                 <div class="my-5">
                     <x-button.primary-green id="trigger">
                         Pilih Gambar Cover
@@ -15,11 +16,13 @@
                 </div>
                 <div class="mb-3 text-start">
                     <label for="judulArtikel" class="form-label">Judul Artikel</label>
-                    <input type="text" class="form-control" id="judulArtikel" name="title">
+                    <input type="text" class="form-control" id="judulArtikel" name="title" value="{{$data->title}}">
                 </div>
                 <div class="mb-3 text-start">
                     <label for="isiArtikel" class="form-label">Isi Artikel</label>
-                    <textarea class="form-control my-editor" id="isiArtikel" rows="20" name="content"></textarea>
+                    <textarea class="form-control my-editor" id="isiArtikel" rows="20" name="content" >
+                        {{$data->content}}
+                    </textarea>
                 </div>
                 <div class="mb-3 text-start">
                     <x-button.primary-green type="submit">
@@ -51,10 +54,10 @@
             }
         })
 </script>
-    <script src="https://cdn.tiny.cloud/1/ocoha1ew50mg21qxmdnslsqi8c51eqxpqqyrp4q0vmduv7wp/tinymce/5/tinymce.min.js"
+    <script src="https://cdn.tiny.cloud/1/ocoha1ew50mg21qxmdnslsqi8c51eqxpqqyrp4q0vmduv7wp/tinymce/4/tinymce.min.js"
         referrerpolicy="origin"></script>
     <script>
-       var editor_config = {
+     var editor_config = {
       path_absolute : "/",
       selector: 'textarea.my-editor',
       relative_urls: false,
