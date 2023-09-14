@@ -6,8 +6,8 @@
             <div class="container">
                 <div class="" style="padding-top: 128px; padding-bottom: 128px;">
                     <h1 class="text-center font-fredoka font-size-68 font-weight-600 line-height-76 color-primary-2">Kamu itu sangat <br> <span class="font-fredoka color-primary-1">Berharga</span></h1>
-                    <p class="text-center font-size-16 font-weight-400 mt-3 d-none d-md-block">“kamu terlalu berharga untuk kalimat “banyak kurangnya”. Kamu hebat sudah bisa <br> bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat <br> kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, <br> yuk saling sharing!</p>
-                    <p class="text-center font-size-16 font-weight-400 mt-3 d-block d-md-none">“kamu terlalu berharga untuk kalimat “banyak kurangnya”. Kamu hebat sudah bisa bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, yuk saling sharing!</p>
+                    <p class="text-center font-size-16 font-weight-400 mt-3 d-none d-md-block">“kamu terlalu berharga untuk kalimat <b>“...aku gk berguna...”</b>. Kamu hebat sudah bisa <br> bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat <br> kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, <br> yuk saling sharing!</p>
+                    <p class="text-center font-size-16 font-weight-400 mt-3 d-block d-md-none">“kamu terlalu berharga untuk kalimat <b>“...aku gk berguna...”</b>. Kamu hebat sudah bisa bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, yuk saling sharing!</p>
                     <x-button.secondary-white class="font-size-14 font-weight-400 d-block mx-auto" onclick="location.href = '/project'">Hands my Hand</x-button.secondary-white>
                 </div>
             </div>
