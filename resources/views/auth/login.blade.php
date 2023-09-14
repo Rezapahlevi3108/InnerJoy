@@ -28,25 +28,26 @@
             <div class="col-md-6 col-sm-12 form">
                 <div class="mt-5 mb-5">
                     <div class="text-end margin-bottom-80 d-none d-md-block">
-                        <span class="font-fredoka font-size-40 font-weight-600 color-primary-1" href="#">InnerJoy</span>
+                        <a class="font-fredoka font-size-40 font-weight-600 color-primary-1" href="{{ route('landing.index') }}">InnerJoy</a>
                     </div>
                     <div class="text-center d-block d-md-none mb-5">
-                        <span class="font-fredoka font-size-40 font-weight-600 color-primary-1" href="#">InnerJoy</span>
+                        <a class="font-fredoka font-size-40 font-weight-600 color-primary-1" href="{{ route('landing.index') }}">InnerJoy</a>
                     </div>
-                    <form>
+                    <form action="{{ route('loginCheck') }}" method="POST">
+                        @csrf
                         <div class="mb-3">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" name="email">
                         </div>
                         <div class="mb-4 mb-md-3">
                             <label class="form-label">Password</label>
-                            <input type="password" class="form-control">
+                            <input type="password" class="form-control" name="password">
                         </div>
-                        <x-button.primary-green class="font-size-16 font-weight-600 w-100 mt-0 mt-md-4" onclick="location.href = '/project'">Login</x-button.primary-green>
+                        <x-button.primary-green type="submit" class="font-size-16 font-weight-600 w-100 mt-0 mt-md-4">Login</x-button.primary-green>
                         <h6 class="text-option mt-4">
                             <span>Atau login dengan</span>
                         </h6>
-                        <x-button.primary-white class="font-size-16 font-weight-600 color-primary-1 w-100 mt-3" onclick="location.href = '/project'">
+                        <x-button.primary-white class="font-size-16 font-weight-600 color-primary-1 w-100 mt-3">
                             <img src="{{ asset('assets/auth/img/google-icon.svg') }}" class="me-1" alt="">
                             Google
                         </x-button.primary-white>

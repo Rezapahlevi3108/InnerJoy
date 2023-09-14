@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-transparant fixed-top">
     <div class="container">
-        <a class="navbar-brand font-fredoka font-size-30 font-weight-600 color-primary-1" href="#">InnerJoy</a>
+        <a class="navbar-brand font-fredoka font-size-30 font-weight-600 color-primary-1" href="{{ route('landing.index') }}">InnerJoy</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
