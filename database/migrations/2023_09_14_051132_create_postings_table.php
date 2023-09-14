@@ -18,8 +18,8 @@ return new class extends Migration
             $table->text('content');
             $table->string('cover');
             $table->boolean('status')->default(true);
-            $table->integer('like');
-            $table->integer('see');
+            $table->integer('like')->nullable(true);
+            $table->integer('see')->nullable(true);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });
