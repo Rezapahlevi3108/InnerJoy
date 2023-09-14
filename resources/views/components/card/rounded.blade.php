@@ -1,5 +1,6 @@
 <div class="card">
-    <img src="{{$img}}" class="card-img-top" alt="story-image">
+    <img src="{{$img}}" class="card-img-top img-fluid" style="height: 250px;
+    object-fit: cover;width: 250px;" alt="story-image">
     <div class="card-body">
         <h5 class="card-title font-fredoka">{{$title}}</h5>
         <div class="d-flex justify-content-start gap-3">
@@ -14,10 +15,11 @@
         </div>
 
         <p class="card-text mt-3">
-           {{$slot}}
+           
         </p>
         <x-button.primary-green class="w-100">
             {{$btn}}
         </x-button.primary-green>
+        {{$slot}}
     </div>
 </div>
