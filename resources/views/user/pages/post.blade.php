@@ -1,6 +1,6 @@
-@extends('user.layout.main')
+@extends('layout.main')
 
-@section('contents')
+@section('content')
     <div class="container my-5">
         <div class="row">
             <h1 class="text-center">post</h1>

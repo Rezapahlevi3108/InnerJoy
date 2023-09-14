@@ -1,11 +1,8 @@
-@extends('posting.layout.main')
+@extends('layout.main')
 
-@section('contents')
-    <div class="container my-5">
-        <div class="row">
-            {{-- <h3>halaman posting</h3> --}}
-
-        </div>
+@section('content')
+    <div class="container my-5 pt-5">
+      
         <div class="row">
             <div class="col-md-9">
                 <h3 class="text-center font-fredoka">Yang Terdalam</h3>
