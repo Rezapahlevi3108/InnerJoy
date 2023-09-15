@@ -18,13 +18,9 @@
         <i class="fa-solid fa-paper-plane me-3" style="color: #ffffff;"></i>  
         Kelola Posting
       </a>
-      <a class="list-group-item list-group-item-action border border-0 sideBarHover list-group-item-light p-3  text-white {{ Request::is('admin/profile*') ? 'custom-active' : 'innerjoyMain' }}" href="{{ route('admin.profile') }}">
+      {{-- <a class="list-group-item list-group-item-action border border-0 sideBarHover list-group-item-light p-3  text-white {{ Request::is('admin/profile*') ? 'custom-active' : 'innerjoyMain' }}" href="{{ route('admin.profile') }}">
         <i class="fa-solid fa-wrench me-3" style="color: #ffffff;"></i>  
         Profil
-      </a>
-        {{-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
-        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a> --}}
+      </a> --}}
     </div>
 </div>

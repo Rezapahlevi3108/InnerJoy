@@ -33,6 +33,7 @@ Route::prefix('admin')->group(function () {
         Route::controller(AdminController::class)->group(function () {
             Route::get('dashboard','index')->name('admin.dashboard');
             Route::get('profile','profile')->name('admin.profile');
+            Route::post('profile/update', 'editProfile')->name('admin.profileUpdate');
         });
     });
 });
@@ -42,6 +43,7 @@ Route::prefix('user')->group(function(){
         Route::controller(UserController::class)->group(function(){
             Route::get('dashboard','index')->name('user.dashboard');
             Route::get('profile','profile')->name('user.profile');
+            Route::post('profile/update', 'editProfile')->name('user.profileUpdate');
             Route::get('post','post')->name('user.post');
             Route::post('post','storePost')->name('user.storePost');
             Route::get('edit/{id}','editPost')->name('user.edit');
