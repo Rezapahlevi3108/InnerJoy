@@ -18,11 +18,11 @@ class UserFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => '$2y$10$reELpzP0oSOwbnZxzgs07uqMS50QPUs5GPnEcRVe940vmne.n.fHm',
+            'name' => 'Nadia Larasati',
+            'email' => 'nadia@gmail.com',
+            'password' => '$2y$10$zTzAnkp9txSM9EwhB3OtkuTdgXkWs9s4JqGH7NB6f2YVO5UQa3/AS',
             'remember_token' => Str::random(10),
-            'role' => 'admin',
+            'role' => 'user',
             'active' => true,
             'google_id' => null,
         ];

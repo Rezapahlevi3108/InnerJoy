@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Posting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     function index() {
-        $data = Posting::where('user_id', 1)->get();
+        $data = Posting::where('user_id', Auth::user()->id)->get();
         return view('user.pages.dashboard',compact('data'));
     }
 
@@ -24,7 +25,7 @@ class UserController extends Controller
         try {
             $posting = new Posting();
             $newFileName = 'innerjoy'.time().".".$request->file('file')->extension();
-            $posting->user_id = 1;
+            $posting->user_id = Auth::user()->id;
             $posting->cover = $newFileName;
             $posting->title = $request->title;
             $posting->content = $request->content;
@@ -43,7 +44,7 @@ class UserController extends Controller
 
     function storeEditPost(Request $request) {
         try {
-            $posting = Posting::find($request->id);
+            $posting = Posting::find(Auth::user()->id);
             $posting->title = $request->title;
             $posting->content = $request->content;
             $newFileName = 'innerjoy'.time().".".$request->file('file')->extension();

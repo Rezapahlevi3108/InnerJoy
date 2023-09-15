@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Admin;
 use App\Models\Posting;
 use App\Models\Sosmed;
 use App\Models\User;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         UserDetail::factory(1)->create();
         Sosmed::factory(1)->create();
         Posting::factory(1)->create();
+        Admin::factory(1)->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
