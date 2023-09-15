@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserDetail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -74,6 +75,8 @@ class AuthController extends Controller
                 'role' => 'user',
                 'active' => true,
             ]);
+
+            $user->UserDetail()->create();
 
             return redirect()->route('login')->with('success', 'Registrasi Berhasil');
         } catch (\Throwable $th) {

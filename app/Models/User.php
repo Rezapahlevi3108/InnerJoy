@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'remember_token',
         'role',
         'active',
     ];
@@ -43,4 +44,8 @@ class User extends Authenticatable
     protected $casts = [
         'password' => 'hashed',
     ];
+
+    public function UserDetail(){
+        return $this->hasOne(UserDetail::class);
+    }
 }
