@@ -113,4 +113,76 @@ class AdminController extends Controller
             return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
         }
     }
+
+    function indexUser() {
+        $data = User::all();
+        $user = User::where('id',Auth::user()->id)->with('UserDetail')->first();
+        return view('admin.pages.user',compact('data','user'));
+    }
+
+    function getUser() {
+        $loggedInUserId = Auth::id();
+        $data = User::where('role', 'user')->where('id', '!=', $loggedInUserId)->get();
+        return response()->json(['data' => $data]);
+    }
+
+    function storeUser(Request $request) {
+        try {
+            $user = User::where('email', $request->email)->first();
+            if ($user) {
+                return "Email sudah terdaftar";
+            }
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'remember_token' => Str::random(10),
+                'role' => 'user',
+                'active' =>  $request->active,
+            ]);
+
+            $user->UserDetail()->create();
+
+            return response()->json(['status'=>'Data Berhasil Disimpan']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
+        }
+    }
+
+    function showUser(string $id) {
+        $user = User::find($id);
+        if (!$user) {
+            return response()->json(['error' => 'Data not found'], 404);
+        }
+        return response()->json(['data' => $user]);
+    }
+
+    function updateUser(Request $request, string $id) {
+        try {
+            $user = User::findOrFail($id);
+
+            $user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'active' =>  $request->active,
+            ]);
+
+            $data = User::where('id', $user->id)->get();
+
+            return response()->json(['status'=>'Data Berhasil Diupdate']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
+        }
+    }
+
+    function destroyUser(string $id) {
+        try {
+            $user = User::findOrFail($id);
+            $data = $user->UserDetail()->delete();
+            $data = $user->delete();
+            return response()->json(['status'=>'Berhasil Dihapus']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
+        }
+    }
 }

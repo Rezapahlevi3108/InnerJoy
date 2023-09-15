@@ -40,6 +40,12 @@ Route::prefix('admin')->group(function () {
             Route::get('admin/show/{id}', 'showAdmin')->name('admin.admin.show');
             Route::post('admin/update/{id}', 'updateAdmin')->name('admin.admin.update');
             Route::get('admin/destroy/{id}', 'destroyAdmin')->name('admin.admin.destroy');
+            Route::get('user','indexUser')->name('admin.user');
+            Route::get('user/get', 'getUser')->name('admin.user.get');
+            Route::post('user/store', 'storeUser')->name('admin.user.store');
+            Route::get('user/show/{id}', 'showUser')->name('admin.user.show');
+            Route::post('user/update/{id}', 'updateUser')->name('admin.user.update');
+            Route::get('user/destroy/{id}', 'destroyUser')->name('admin.user.destroy');
         });
     });
 });
