@@ -55,7 +55,7 @@
                 <div class="col-md-4">
                     <select class="form-select" aria-label="Default select example" id="visibilitas">
                         <option value="1" selected>Aktif</option>
-                        <option value="2">Terblokir</option>
+                        <option value="0">Terblokir</option>
                     </select>
                 </div>
                 <div class="col-md-4">

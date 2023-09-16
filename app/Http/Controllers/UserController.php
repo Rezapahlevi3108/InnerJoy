@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\File;
 class UserController extends Controller
 {
     function index() {
-        $data = Posting::where('user_id', Auth::user()->id)->get();
+        $data = Posting::where('user_id', Auth::user()->id)->where('status',1)->get();
         return view('user.pages.dashboard',compact('data'));
     }
 
@@ -105,12 +105,12 @@ class UserController extends Controller
        
     }
 
-    function fetchData($kategori=1,$visibilitas=true) {
+    function fetchData($kategori=1,$visibilitas=1) {
         try {
             if($kategori == 1){
-                $data = Posting::where('status',$visibilitas)->orderBy('created_at','desc')->get();
+                $data = Posting::where('status',$visibilitas)->where('user_id', Auth::user()->id)->orderBy('created_at','desc')->orderBy('created_at','desc')->get();
             }else{
-                $data = Posting::where('status',$visibilitas)->orderBy('like','desc')->get();
+                $data = Posting::where('status',$visibilitas)->where('user_id', Auth::user()->id)->orderBy('like','desc')->get();
             }
             $result = [
                 'data' => $data,
@@ -126,12 +126,12 @@ class UserController extends Controller
         }
     }
 
-    function searchData($kategori=1,$visibilitas=true,$query) {
+    function searchData($kategori=1,$visibilitas=1,$query) {
         try {
             if($kategori == 1){
-                $data = Posting::where('status',$visibilitas)->where('title','like','%'.$query.'%')->orderBy('created_at','desc')->get();
+                $data = Posting::where('status',$visibilitas)->where('user_id', Auth::user()->id)->where('title','like','%'.$query.'%')->orderBy('created_at','desc')->get();
             }else{
-                $data = Posting::where('status',$visibilitas)->where('title','like','%'.$query.'%')->orderBy('like','desc')->get();
+                $data = Posting::where('status',$visibilitas)->where('user_id', Auth::user()->id)->where('title','like','%'.$query.'%')->orderBy('like','desc')->get();
             }
             $result = [
                 'data' => $data,
