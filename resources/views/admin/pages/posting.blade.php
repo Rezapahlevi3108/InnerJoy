@@ -6,7 +6,7 @@
         <div id="postingTable"></div>
     </div>
     
-    <!-- modal edit-->
+    <!-- modal detail posting-->
     <div class="modal fade" id="ModalDetailPosting" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
             <div class="modal-content">
@@ -17,16 +17,12 @@
                 <div class="modal-body">
                     <div id="detailPosting"></div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="update">Simpan</button>
-                </div>
             </div>
         </div>
     </div>
-    <!-- end of modal edit-->
+    <!-- end of modal detail posting-->
 
-    <!-- Modal Konfirmasi Blockir -->
+    <!-- Modal Konfirmasi Block -->
     <div class="modal fade" id="ModalBlockConfirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -44,7 +40,27 @@
             </div>
         </div>
     </div>
-    <!-- end of modal konfirmasi Blockir-->
+    <!-- end of modal konfirmasi Block-->
+
+    <!-- Modal Konfirmasi Unblock -->
+    <div class="modal fade" id="ModalUnblockConfirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Konfirmasi Tampilkan Posting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Anda yakin akan menampilkan postingan ini?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="button" class="btn btn-primary" id="confirmUnblock" data-bs-dismiss="modal">Tampilkan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of modal konfirmasi Unblock-->
 
     <!-- Modal Konfirmasi Delete -->
     <div class="modal fade" id="ModalDeleteConfirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,7 +98,7 @@
                         // console.log(result)
                         let fillHtml = ''
                         fillHtml += '<table id="example" class="display" style="width:100%">'
-                        fillHtml += '<thead><tr><th>No</th><th>Author</th><th>Judul</th><th>Konten</th><th>Tanggal</th><th>Status</th><th>Aksi</th></tr></thead>'
+                        fillHtml += '<thead><tr><th>No</th><th>Author</th><th>Judul</th><th>Tanggal</th><th>Status</th><th>Aksi</th></tr></thead>'
                         fillHtml += '<tbody>'
                         let no = 1
                         $.each(result.data, function(i, item){
@@ -90,14 +106,14 @@
                             fillHtml +='<td>'+ no++ +'</td>'
                             fillHtml +='<td>'+ item.user.name +'</td>'
                             fillHtml +='<td>'+ item.title +'</td>'
-                            fillHtml +='<td>'+ item.content +'</td>'
+                            // fillHtml +='<td>'+ item.content +'</td>'
                             let formattedDate = item.created_at.split('T')[0];
                             fillHtml +='<td>'+ formattedDate +'</td>'
                             fillHtml +='<td><span class="' + (item.status ? 'status-green' : 'status-red') + '">' + (item.status ? 'Aktif' : 'Tidak Aktif') + '</span></td>'
                             fillHtml +='<td>';
                             fillHtml +='<div class="d-flex flex-row">';
                             fillHtml +='<button class="btn btn-primary btn-detail-posting me-1" data="'+item.id+'" data-bs-toggle="modal" data-bs-target="#ModalDetailPosting"><i class="fa-solid fa-info" style="color: #ffffff;"></i></button>';
-                            fillHtml +='<button class="btn btn-danger btn-block me-1" data="'+item.id+'"><i class="fa-solid fa-ban" style="color: #ffffff;"></i></button>';
+                            fillHtml +='<button class="btn ' + (item.status ? 'btn-danger btn-block' : 'btn-primary btn-unblock') + ' me-1" data="'+item.id+'"><i class="' + (item.status ? 'fa-regular fa-eye-slash' : 'fa-solid fa-eye') + '" style="color: #ffffff;"></i></button>';
                             fillHtml +='<button class="btn btn-danger btn-delete" data="'+item.id+'"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>';
                             fillHtml +='</div>';
                             fillHtml +='</td>';
@@ -143,6 +159,32 @@
 
             // Block posting
             $(document).on('click', '#confirmBlock', function(){
+                let id = $(this).attr('data-id');
+                $.ajax({
+                    method: "POST",
+                    url: "{{ route('admin.posting.block', '') }}/" + id,
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    success: function(result) {
+                        alert(result.status);
+                        getData();
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+            });
+
+            // modal konfirmasi unblock
+            $(document).on('click', '.btn-unblock', function(){
+                let id = $(this).attr('data');
+                $('#confirmUnblock').attr('data-id', id);
+                $('#ModalUnblockConfirmation').modal('show');
+            });
+
+            // Unblock posting
+            $(document).on('click', '#confirmUnblock', function(){
                 let id = $(this).attr('data-id');
                 $.ajax({
                     method: "POST",

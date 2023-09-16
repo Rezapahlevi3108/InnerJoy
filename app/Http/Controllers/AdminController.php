@@ -195,10 +195,10 @@ class AdminController extends Controller
 
     function getPosting() {
         $data = Posting::with('user')->get();
-        foreach ($data as $item) {
-            $item->title = Str::limit($item->title, 30);
-            $item->content = Str::limit($item->content, 160);
-        }
+        // foreach ($data as $item) {
+        //     $item->title = Str::limit($item->title, 30);
+        //     $item->content = Str::limit($item->content, 160);
+        // }
         return response()->json(['data' => $data]);
     }
 
@@ -210,12 +210,20 @@ class AdminController extends Controller
     function blockPosting(string $id) {
         try {
             $posting = Posting::find($id);
-            $posting->update([
-                'status' => '0',
-            ]);
 
-            $data = Posting::where('id', $id)->get();
-            return response()->json(['status'=>'Berhasil Diblokir']);
+            if (!$posting) {
+                return response()->json(['status'=>'Posting not found']);
+            }
+
+            if ($posting->status == true) {
+                $posting->update(['status' => '0']);
+                $statusMessage = 'Berhasil Dinonaktifkan';
+            } else {
+                $posting->update(['status' => '1']);
+                $statusMessage = 'Berhasil Diaktifkan';
+            }
+    
+            return response()->json(['status' => $statusMessage]);
         } catch (\Throwable $th) {
             return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
         }
