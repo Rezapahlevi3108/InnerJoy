@@ -1,7 +1,7 @@
 @extends('admin.layout.main')
 
 @section('contents')
-    <h5>Halaman Profil</h5>
+    <h2 class="mb-4">Profil</h2>
     <div class="card bg-white shadow p-5">
         <form id="form" enctype="multipart/form-data" method="POST">
             <meta name="csrf-token" content="{{ csrf_token() }}">

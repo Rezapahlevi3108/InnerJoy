@@ -14,7 +14,7 @@
         <i class="fa-solid fa-user me-3" style="color: #ffffff;"></i>  
         Kelola Pengguna
       </a>
-      <a class="list-group-item list-group-item-action border border-0 sideBarHover list-group-item-light p-3  text-white innerjoyMain" href="#">
+      <a class="list-group-item list-group-item-action border border-0 sideBarHover list-group-item-light p-3  text-white {{ Request::is('admin/posting*')? 'custom-active':'innerjoyMain'}}" href="{{ route('admin.posting') }}">
         <i class="fa-solid fa-paper-plane me-3" style="color: #ffffff;"></i>  
         Kelola Posting
       </a>

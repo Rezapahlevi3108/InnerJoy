@@ -1,7 +1,8 @@
 @extends('admin.layout.main')
 
 @section('contents')
-    <div class="card bg-white shadow p-5">
+    <h2 class="mb-4">Kelola Admin</h2>
+    <div class="card bg-white shadow border-0 p-5">
         <div class="ms-auto mb-3">
             <x-button.primary-green type="button" class="font-size-14" data-bs-toggle="modal" data-bs-target="#ModalAdd">
                 <i class="fa-solid fa-plus fa-beat-fade me-2" style="color: #ffffff;"></i>
@@ -134,7 +135,7 @@
                             fillHtml +='<td>'+ item.email +'</td>'
                             fillHtml +='<td>'+ item.role +'</td>'
                             fillHtml +='<td><span class="' + (item.active ? 'status-green' : 'status-red') + '">' + (item.active ? 'Aktif' : 'Tidak Aktif') + '</span></td>'
-                            fillHtml +='<td><button class="btn btn-primary btn-edit" data="'+item.id+'" data-bs-toggle="modal" data-bs-target="#ModalEdit">Edit</button> <button class="btn btn-danger btn-delete" data="'+item.id+'">Hapus</button></td>'
+                            fillHtml +='<td><button class="btn btn-primary btn-edit" data="'+item.id+'" data-bs-toggle="modal" data-bs-target="#ModalEdit"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></button> <button class="btn btn-danger btn-delete" data="'+item.id+'"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button></td>'
                             fillHtml +='</tr>'
                         });
                         fillHtml += '</tbody>'

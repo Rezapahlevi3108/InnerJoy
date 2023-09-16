@@ -46,6 +46,11 @@ Route::prefix('admin')->group(function () {
             Route::get('user/show/{id}', 'showUser')->name('admin.user.show');
             Route::post('user/update/{id}', 'updateUser')->name('admin.user.update');
             Route::get('user/destroy/{id}', 'destroyUser')->name('admin.user.destroy');
+            Route::get('posting','indexPosting')->name('admin.posting');
+            Route::get('posting/get', 'getPosting')->name('admin.posting.get');
+            Route::get('posting/detail-posting/{id}', 'detailPosting')->name('admin.posting.detail-posting');
+            Route::post('posting/block/{id}', 'blockPosting')->name('admin.posting.block');
+            Route::get('posting/destroy/{id}', 'destroyPosting')->name('admin.posting.destroy');
         });
     });
 });

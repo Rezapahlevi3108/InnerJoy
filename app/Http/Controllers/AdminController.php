@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\User;
+use App\Models\Posting;
 use App\Models\UserDetail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -180,6 +182,49 @@ class AdminController extends Controller
             $user = User::findOrFail($id);
             $data = $user->UserDetail()->delete();
             $data = $user->delete();
+            return response()->json(['status'=>'Berhasil Dihapus']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
+        }
+    }
+
+    function indexPosting() {
+        $user = User::where('id',Auth::user()->id)->with('UserDetail')->first();
+        return view('admin.pages.posting',compact('user'));
+    }
+
+    function getPosting() {
+        $data = Posting::with('user')->get();
+        foreach ($data as $item) {
+            $item->title = Str::limit($item->title, 30);
+            $item->content = Str::limit($item->content, 160);
+        }
+        return response()->json(['data' => $data]);
+    }
+
+    function detailPosting($id) {
+        $data = Posting::find($id);
+        return response()->json(['data' => $data]);
+    }
+
+    function blockPosting(string $id) {
+        try {
+            $posting = Posting::find($id);
+            $posting->update([
+                'status' => '0',
+            ]);
+
+            $data = Posting::where('id', $id)->get();
+            return response()->json(['status'=>'Berhasil Diblokir']);
+        } catch (\Throwable $th) {
+            return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
+        }
+    }
+
+    function destroyPosting(string $id) {
+        try {
+            $posting = Posting::findOrFail($id);
+            $data = $posting->delete();
             return response()->json(['status'=>'Berhasil Dihapus']);
         } catch (\Throwable $th) {
             return response()->json(['status'=>'Fail cause '.$th->getMessage()]);
