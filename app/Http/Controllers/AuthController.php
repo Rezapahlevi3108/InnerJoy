@@ -6,8 +6,9 @@ use App\Models\User;
 use App\Models\UserDetail;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -90,5 +91,35 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect()->route('login');
+    }
+
+    public function redirectToGoogle() {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function fromGoogle() {
+        try {
+            $user = Socialite::driver('google')->stateless()->user();
+            $findUser = User::where('email', $user->email)->first();
+            if($findUser) {
+                Auth::login($findUser);
+                return redirect()->intended(route('user.dashboard'));
+            }else{
+                $newUser = new User();
+                $newUser->name = $user->name;
+                $newUser->email = $user->email;
+                $newUser->google_id = $user->id;
+                $newUser->role = 'user';
+                $newUser->active = true;
+                $newUser->save();
+
+                $newUser->UserDetail()->create();
+
+                Auth::login($newUser);
+                return redirect()->intended(route('user.dashboard'));
+            }
+        } catch (\Throwable $th) {
+            return $th;
+        }
     }
 }

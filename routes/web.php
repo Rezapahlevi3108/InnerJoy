@@ -28,6 +28,8 @@ Route::get('logout', [AuthController::class, 'logout'])->name('logout')->middlew
 Route::get('posting/{id}',[PostingController::class,'index'])->name('posting');
 Route::get('beranda',[PostingController::class,'beranda'])->name('beranda');
 Route::get('posting/like/{id}',[PostingController::class,'like'])->name('like');
+Route::get('social/google', [AuthController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('social/google/callback', [AuthController::class, 'fromGoogle'])->name('login.google.callback');
 
 Route::prefix('admin')->group(function () {
     Route::middleware(['auth', 'isAdmin'])->group(function () {

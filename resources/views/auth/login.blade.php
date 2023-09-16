@@ -47,10 +47,12 @@
                         <h6 class="text-option mt-4">
                             <span>Atau login dengan</span>
                         </h6>
-                        <x-button.primary-white class="font-size-16 font-weight-600 color-primary-1 w-100 mt-3">
-                            <img src="{{ asset('assets/auth/img/google-icon.svg') }}" class="me-1" alt="">
-                            Google
-                        </x-button.primary-white>
+                        <a href="{{ route('login.google') }}">
+                            <x-button.primary-white class="font-size-16 font-weight-600 color-primary-1 w-100 mt-3" type="button">
+                                <img src="{{ asset('assets/auth/img/google-icon.svg') }}" class="me-1" alt="google_logo">
+                                Google
+                            </x-button.primary-white>
+                        </a>
                         <div class="font-weight-600 text-center margin-top-76 d-none d-md-block">Belum punya akun? <a href="{{ route('register') }}" class="color-primary-1">Daftar Sekarang</a></div>
                         <div class="font-weight-600 text-center d-block d-md-none mt-5">Belum punya akun? <a href="{{ route('register') }}" class="color-primary-1">Daftar Sekarang</a></div>
                     </form>
