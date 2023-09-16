@@ -49,6 +49,8 @@ Route::prefix('user')->group(function(){
             Route::get('edit/{id}','editPost')->name('user.edit');
             Route::post('edit','storeEditPost')->name('user.storeEditPost');
             Route::get('delete/{id}','deletePost')->name('user.delete');
+            Route::get('fetchData/{kategori?}/{visibilitas?}','fetchData')->name('user.fetchData');
+            Route::get('searchData/{kategori?}/{visibilitas?}/{query}','searchData')->name('user.searchData');
         });   
     });
 });

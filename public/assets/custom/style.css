@@ -24,7 +24,7 @@
 
 /* Background Color */
 .bg-primary-1 {
-    background-color: #669A8E;
+    background-color: #669A8E !important;
 }
 
 /* Font Size */
