@@ -18,4 +18,15 @@ class PostingController extends Controller
     function beranda() {
         return view('posting.pages.beranda');
     }
+
+    function like($id) {
+        try {
+            $post = Posting::find($id);
+            $post->like++;
+            $post->save();
+            return response()->json(['status' => 'Terima Kasih sudah Like']);
+        } catch (\Throwable $th) {
+            return response()->json(['status' => $th->getMessage()]);
+        }
+    }
 }

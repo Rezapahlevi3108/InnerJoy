@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('profile_photo')->nullable(true);
             $table->string('phone')->nullable(true);
             $table->text('address')->nullable(true);
+            $table->text('bio')->nullable(true);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });
