@@ -31,6 +31,7 @@ class UserController extends Controller
             $userDetail = UserDetail::where('user_id',Auth::user()->id)->first();
             $userDetail->phone = $request->phone;
             $userDetail->address = $request->address;
+            $userDetail->bio = $request->bio;
             if($request->hasFile('file')){
                 File::delete('profile/'.$userDetail->profile_photo);
                 $userDetail ->profile_photo = 'innerjoy'.time().'.'.$request->file->extension();

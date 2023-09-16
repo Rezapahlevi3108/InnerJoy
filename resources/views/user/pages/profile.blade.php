@@ -50,6 +50,10 @@
                                 <input type="text" class="form-control" id="telepon" name="telepon" value="{{ $user->UserDetail->phone ? $user->UserDetail->phone : '' }}">
                             </div>
                             <div class="form-group mb-3">
+                                <label for="bio">Biografi</label>
+                                <textarea class="form-control" id="bio" name="bio" rows="3">{{ $user->UserDetail->bio ? $user->UserDetail->bio : '' }}</textarea>
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="alamat">Alamat</label>
                                 <textarea class="form-control" id="alamat" name="alamat" rows="3">{{ $user->UserDetail->address ? $user->UserDetail->address : '' }}</textarea>
                             </div>
@@ -96,8 +100,9 @@
                 formData.append('name', $("#namaLengkap").val());
                 formData.append('email', $("#email").val());
                 formData.append('phone', $("#telepon").val());
+                formData.append('bio', $("#bio").val());
                 formData.append('address', $("#alamat").val());
-
+                
                 $.ajax({
                     type: "POST",
                     url: "{{ route('user.profileUpdate') }}",
