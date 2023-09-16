@@ -34,6 +34,18 @@ Route::prefix('admin')->group(function () {
             Route::get('dashboard','index')->name('admin.dashboard');
             Route::get('profile','profile')->name('admin.profile');
             Route::post('profile/update', 'editProfile')->name('admin.profileUpdate');
+            Route::get('admin','indexAdmin')->name('admin.admin');
+            Route::get('admin/get', 'getAdmin')->name('admin.admin.get');
+            Route::post('admin/store', 'storeAdmin')->name('admin.admin.store');
+            Route::get('admin/show/{id}', 'showAdmin')->name('admin.admin.show');
+            Route::post('admin/update/{id}', 'updateAdmin')->name('admin.admin.update');
+            Route::get('admin/destroy/{id}', 'destroyAdmin')->name('admin.admin.destroy');
+            Route::get('user','indexUser')->name('admin.user');
+            Route::get('user/get', 'getUser')->name('admin.user.get');
+            Route::post('user/store', 'storeUser')->name('admin.user.store');
+            Route::get('user/show/{id}', 'showUser')->name('admin.user.show');
+            Route::post('user/update/{id}', 'updateUser')->name('admin.user.update');
+            Route::get('user/destroy/{id}', 'destroyUser')->name('admin.user.destroy');
         });
     });
 });

@@ -2,6 +2,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #ECF3F3;
+}
+
 .fredoka{
     font-family: 'Fredoka', sans-serif;
 }
@@ -20,4 +24,40 @@
 
 .sideBarHover:hover{
     background-color: #428172 !important;
+}
+
+.status-green {
+    padding: 6px 12px;
+    background: rgba(30, 137, 30, 0.08);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #1E891E;
+}
+
+.status-red {
+    padding: 6px 12px;
+    background: rgba(225, 44, 65, 0.08);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #E12C41;
+}
+
+.status-orange {
+    padding: 6px 12px;
+    background: rgba(228, 82, 0, 0.08);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #E45200;
+}
+
+.status-blue {
+    padding: 6px 12px;
+    background: rgba(29, 117, 218, 0.08);
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #1D75DA;
 }

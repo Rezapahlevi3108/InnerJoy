@@ -2,7 +2,7 @@
 
 @section('contents')
     <h5>Halaman Profil</h5>
-    <div class="">
+    <div class="card bg-white shadow p-5">
         <form id="form" enctype="multipart/form-data" method="POST">
             <meta name="csrf-token" content="{{ csrf_token() }}">
             <input type="text" value="" class="d-none" id="id_user">
