@@ -9,6 +9,9 @@ class PostingController extends Controller
 {
     function index($id) {
         $addSee = Posting::find($id);
+        if($addSee->status == 0){
+          return redirect()->route('beranda');
+        }
         $addSee->see++;
         $addSee->save();
         $data = Posting::where('id',$id)->first();

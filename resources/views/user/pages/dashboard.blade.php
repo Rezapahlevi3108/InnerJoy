@@ -5,10 +5,10 @@
         <div class="row my-5 pt-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-3"></div>
+                    <div class="col-md-4 col-6 text-center">
                         <ul id="myTab" role="tablist"
-                            class="nav nav-tabs nav-pills flex-column flex-sm-row text-center rounded-pill bg-light border-0 rounded-nav">
+                            class="nav nav-tabs nav-pills flex-row text-center rounded-pill bg-light border-0 rounded-nav">
                             <li class="nav-item flex-sm-fill ">
                                 <a id="home-tab" data-toggle="tab" href="{{ route('user.dashboard') }}" role="tab"
                                     aria-controls="home" aria-selected="true"
@@ -21,7 +21,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4"></div>
+                    <div class="col-md-4 col-3"></div>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
 
             <div class="row" id="pad">
                 @foreach ($data as $item)
-                    <div class="col-md-3 col-6 my-3 d-flex align-items-stretch">
+                    <div class="col-md-3 col-6 my-3 ">
                         <a href="{{ route('user.edit', ['id' => $item->id]) }}">
                             <x-card.rounded see="{{ $item->see }}" like="{{ $item->like }}"
                                 title="{{ $item->title }}" btn="Sunting"
@@ -101,11 +101,11 @@
             visibilitas = $(this).val();
             fetchData();
         })
-        $('#searchBar').on('input',function(e){
+        $('#searchBar').on('input', function(e) {
             cari = e.target.value
-            if(cari =='' || cari == null ||cari == undefined || cari == ' '){
-               fetchData();
-            }else{
+            if (cari == '' || cari == null || cari == undefined || cari == ' ') {
+                fetchData();
+            } else {
                 searchData();
             }
         })
@@ -114,15 +114,25 @@
             $.ajax({
                 url: `fetchData/${kagetori}/${visibilitas}`,
                 method: "GET",
-                headers:{
+                headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                beforeSend: function() {
+                    let element = "";
+                    element += `
+                                <div class="d-flex justify-content-center">
+                                    <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                                        <span class="visually-hidden">Loading...</>
+                                    </div>
+                                </div>`
+                    $("#pad").html(element)
                 },
                 success: function(data) {
                     // console.log(data.data);
                     let element = "";
                     $.each(data.data, function(index, value) {
                         element += `
-                            <div class="col-md-3 col-6 my-3 d-flex align-items-stretch">
+                            <div class="col-md-3 col-6 my-3 ">
                                 <a href="edit/${value.id}">
                                     <x-card.rounded see="${value.see}" like="${value.like}" title="${value.title}" btn="Sunting" img="{{ URL::asset('images/${value.cover}') }}">
                                         <a href="delete/${value.id}">
@@ -147,15 +157,25 @@
             $.ajax({
                 url: `searchData/${kagetori}/${visibilitas}/${cari}`,
                 method: "GET",
-                headers:{
+                headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                beforeSend: function() {
+                    let element = "";
+                    element += `
+                                <div class="d-flex justify-content-center">
+                                    <div class="spinner-border text-success" style="width: 3rem; height: 3rem;" role="status">
+                                        <span class="visually-hidden">Loading...</>
+                                    </div>
+                                </div>`
+                    $("#pad").html(element)
                 },
                 success: function(data) {
                     // console.log(data.data);
                     let element = "";
                     $.each(data.data, function(index, value) {
                         element += `
-                            <div class="col-md-3 col-6 my-3 d-flex align-items-stretch">
+                            <div class="col-md-3 col-6 my-3 ">
                                 <a href="edit/${value.id}">
                                     <x-card.rounded see="${value.see}" like="${value.like}" title="${value.title}" btn="Sunting" img="{{ URL::asset('images/${value.cover}') }}">
                                         <a href="delete/${value.id}">
@@ -175,6 +195,5 @@
                 }
             })
         }
-
     </script>
 @endpush

@@ -112,3 +112,8 @@
 .card {
     border-radius: 12px !important;
 }
+
+.img_pad{
+    background-size: cover;
+    aspect-ratio: 1/1;
+}
