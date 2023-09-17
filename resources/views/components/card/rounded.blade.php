@@ -1,8 +1,8 @@
 <div class="card">
-    <img src="{{$img}}" class="card-img-top img-fluid" style="height: 250px;
-    object-fit: cover;width: 250px;" alt="story-image">
+    {{-- <img src="{{$img}}" class="card-img-top img-fluid" alt="story-image"> --}}
+    <div class="img_pad" style="background-image: url({{$img}})"></div>
     <div class="card-body">
-        <h5 class="card-title font-fredoka">{{$title}}</h5>
+        <h5 class="card-title font-fredoka text-truncate">{{$title}}</h5>
         <div class="d-flex justify-content-start gap-3">
             <div>
                 <i class="fa-solid fa-eye"></i>
