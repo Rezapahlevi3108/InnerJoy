@@ -42,7 +42,7 @@
                     <img src="{{ asset('assets/landing/img/telephone-icon.svg') }}" class="me-3" alt="">
                     <div>
                         <span class="font-size-16 font-weight-400 text-white">Reza Pahlevi</span>
-                        <span class="font-size-16 font-weight-400 text-white">+6291213543267</span>
+                        <span class="font-size-16 font-weight-400 text-white">+6281912368235</span>
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">

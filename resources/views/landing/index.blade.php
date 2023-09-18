@@ -6,8 +6,8 @@
             <div class="container">
                 <div class="" style="padding-top: 128px; padding-bottom: 128px;">
                     <h1 class="text-center font-fredoka font-size-68 font-weight-600 line-height-76 color-primary-2">Kamu itu sangat <br> <span class="font-fredoka color-primary-1">Berharga</span></h1>
-                    <p class="text-center font-size-16 font-weight-400 mt-3 d-none d-md-block">“kamu terlalu berharga untuk kalimat <b>“...aku gk berguna...”</b>. Kamu hebat sudah bisa <br> bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat <br> kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, <br> yuk saling sharing!</p>
-                    <p class="text-center font-size-16 font-weight-400 mt-3 d-block d-md-none">“kamu terlalu berharga untuk kalimat <b>“...aku gk berguna...”</b>. Kamu hebat sudah bisa bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, yuk saling sharing!</p>
+                    <p class="text-center font-size-16 font-weight-400 mt-3 d-none d-md-block">Kamu hebat sudah bisa bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat <br> kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, <br> yuk saling sharing!</p>
+                    <p class="text-center font-size-16 font-weight-400 mt-3 d-block d-md-none">“Kamu hebat sudah bisa bertahan sampai detik ini, hal menyakitkan apapun yang pernah kamu alami membuat kamu jadi sekuat sekarang. Siapa tau cerita kamu bisa bikin orang lain sehebat kamu juga loh, yuk saling sharing!</p>
                     <x-button.secondary-white class="font-size-14 font-weight-400 d-block mx-auto" onclick="location.href = '{{ route('login') }}'">Hands my Hand</x-button.secondary-white>
                 </div>
             </div>
@@ -88,47 +88,4 @@
             </div>
         </div>
     </section>
-
-    @push('custom-script')
-        {{-- <script>
-            let visibilitas = 1;
-            $('#visibilitas').on('change', function() {
-                visibilitas = $(this).val();
-                fetchData();
-            })
-
-            function fetchData() {
-                $.ajax({
-                    url: `fetchData/${visibilitas}`,
-                    method: "GET",
-                    headers:{
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    success: function(data) {
-                        // console.log(data.data);
-                        let element = "";
-                        $.each(data.data, function(index, value) {
-                            element += `
-                                <div class="col-md-3 col-6 my-3 d-flex align-items-stretch">
-                                    <a href="edit/${value.id}">
-                                        <x-card.rounded see="${value.see}" like="${value.like}" title="${value.title}" btn="Sunting" img="{{ URL::asset('images/${value.cover}') }}">
-                                            <a href="delete/${value.id}">
-                                                <x-button.primary-white class="w-100 mt-3">Hapus</x-button.primary-white>
-                                            </a>
-                                        </x-card.rounded>
-                                    </a>
-                                </div>
-                            `;
-                        })
-
-                        $("#pad").html(element)
-                        // console.log(data)
-                    },
-                    error: function(error) {
-                        console.log(error.message);
-                    }
-                })
-            }
-        </script> --}}
-    @endpush
 @endsection

@@ -15,7 +15,13 @@ class AdminController extends Controller
 {
     function index() {
         $user = User::where('id',Auth::user()->id)->with('UserDetail')->first();
-        return view('admin.pages.dashboard',compact('user'));
+        $dataAdmin = User::where('role', 'admin')->where('active', 1)->count();
+        $dataAdminNonActive = User::where('role', 'admin')->where('active', 0)->count();
+        $dataUser = User::where('role', 'user')->where('active', 1)->count();
+        $dataUserNonActive = User::where('role', 'user')->where('active', 0)->count();
+        $dataPosting = Posting::where('status', 1)->count();
+        $dataPostingNonActive = Posting::where('status', 0)->count();
+        return view('admin.pages.dashboard',compact('user', 'dataAdmin', 'dataAdminNonActive', 'dataUser', 'dataUserNonActive', 'dataPosting', 'dataPostingNonActive'));
     }
     function profile() {
         $user = User::where('id',Auth::user()->id)->with('UserDetail')->first();
