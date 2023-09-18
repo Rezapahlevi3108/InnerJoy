@@ -33,3 +33,64 @@
     border-bottom: 3px solid #ffffff;
     width: 60px;
 }
+
+.img-posting {
+    width: 120px;
+    height: 80px;
+}
+
+.title-posting {
+    font-size: 18px;
+    font-weight: 500;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.content-posting {
+    text-align: justify;
+    font-size: 10px;
+    font-weight: 400;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.visibilitas-posting {
+    font-size: 12px;
+}
+
+.date-posting {
+    font-size: 10px;
+}
+
+@media (min-width: 992px) {
+    .img-posting {
+        width: 300px;
+        height: 200px;
+    }
+
+    .title-posting {
+        font-size: 25px;
+        font-weight: 500;
+        width: 700px;
+        white-space: nowrap;
+    }
+
+    .content-posting {
+        font-size: 14px;
+        font-weight: 400;
+        width: 100%;
+        white-space: normal;
+    }
+
+    .visibilitas-posting {
+        font-size: 14px;
+    }
+
+    .date-posting {
+        font-size: 12px;
+    }
+}

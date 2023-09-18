@@ -38,7 +38,7 @@
             <h1 class="font-size-40 font-weight-600 color-primary-2 text-center mb-5">Cerita Terpopuler</h1>
             <div class="row" id="pad">
                 @foreach ($data as $item)
-                    <div class="col-md-3 col-6 my-3 d-flex align-items-stretch">
+                    <div class="col-md-3 col-6 my-3">
                         <a href="{{ route('posting', ['id' => $item->id]) }}">
                             <x-card.rounded see="{{ $item->see }}" like="{{ $item->like }}"
                                 title="{{ $item->title }}" btn="Baca"
@@ -48,7 +48,7 @@
                     </div>
                 @endforeach
             </div>
-            <x-button.secondary-white class="font-size-14 font-weight-400 d-block mx-auto mt-4" onclick="location.href = '{{ route('beranda') }}'">See More</x-button.secondary-white>
+            <x-button.secondary-white class="font-size-14 font-weight-400 shadow d-block mx-auto mt-4" onclick="location.href = '{{ route('beranda') }}'">See More</x-button.secondary-white>
         </div>
     </section>
 

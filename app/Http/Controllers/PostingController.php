@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Posting;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PostingController extends Controller
@@ -19,7 +20,14 @@ class PostingController extends Controller
     }
 
     function beranda() {
-        return view('posting.pages.beranda');
+        $data = Posting::where('status', 1)
+        ->orderBy('see','desc')
+        ->get()
+        ->map(function($item) {
+            $item->content = Str::limit(strip_tags($item->content), 280);
+            return $item;
+        });
+        return view('posting.pages.beranda', compact('data'));
     }
 
     function like($id) {

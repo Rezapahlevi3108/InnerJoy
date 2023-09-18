@@ -54,7 +54,7 @@
             }
         })
 </script>
-    <script src="https://cdn.tiny.cloud/1/ocoha1ew50mg21qxmdnslsqi8c51eqxpqqyrp4q0vmduv7wp/tinymce/4/tinymce.min.js"
+    <script src="https://cdn.tiny.cloud/1/ocoha1ew50mg21qxmdnslsqi8c51eqxpqqyrp4q0vmduv7wp/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
     <script>
      var editor_config = {

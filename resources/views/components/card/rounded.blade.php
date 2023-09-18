@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card shadow border-0">
     {{-- <img src="{{$img}}" class="card-img-top img-fluid" alt="story-image"> --}}
     <div class="img_pad" style="background-image: url({{$img}})"></div>
     <div class="card-body">
