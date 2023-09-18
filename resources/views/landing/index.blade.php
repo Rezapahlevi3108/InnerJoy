@@ -20,13 +20,15 @@
                 <div class="row padding-top-66 padding-bottom-66">
                     <div class="col-md-6 d-flex align-items-center">
                         <div>
-                            <h1 class="font-size-40 font-weight-600 color-primary-2">Kenalan Yuk...</h1>
-                            <p class="font-size-18 font-weight-400 mt-4" style="text-align: justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos soluta, voluptatibus optio consequuntur eaque esse dicta aperiam, aut expedita unde laudantium excepturi exercitationem aliquid, laboriosam totam qui. Consequuntur, similique eligendi. aut expedita unde laudantium excepturi exercitationem aliquid, laboriosam totam qui. Consequuntur, similique eligendi.</p>
+                            <h1 class="font-size-40 font-weight-600 color-primary-2">Ayo Sini...</h1>
+                            <p class="font-size-18 font-weight-400 mt-4" style="text-align: justify">
+                                Jangan kamu pendam sendiri...kami siap kok dengar cerita atau keluh kesah kamu. Banyak juga kok teman lainnya yang mungkin sama seperti kamu, mungkin kita bisa saling berbagi dan menguatkan. Kalo gitu...ayo gabung bareng kita. Kamu gk akan sendiri lagi deh
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="{{ asset('assets/landing/img/about-us.png') }}" class="d-none d-md-block mx-auto" width="380" alt="">
-                        <img src="{{ asset('assets/landing/img/about-us.png') }}" class="d-block d-md-none mx-auto mt-4" width="280" alt="">
+                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-none d-md-block mx-auto" width="380" alt="">
+                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-block d-md-none mx-auto mt-4" width="280" alt="">
                     </div>
                 </div>
             </div>
