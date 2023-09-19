@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer" id="footer">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -34,31 +34,54 @@
                     <a href="" class="font-size-16 font-weight-400 text-white">Personal Loan</a>
                 </div>
             </div> --}}
-            <span class="mx-auto col-md-3"></span>
+            {{-- <span class="mx-auto col-md-3"></span> --}}
             <div class="col-md-3 mt-5 mt-md-0">
-                <h3 class="footer-title font-size-18 font-weight-600 text-white text-center text-md-start">CONTACT US</h3>
+                <h3 class="footer-title font-size-18 font-weight-600 text-white text-center text-md-start">Widi Yatmoko</h3>
                 <hr class="line d-block mx-auto mx-md-0 mt-0">
                 <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">
                     <img src="{{ asset('assets/landing/img/telephone-icon.svg') }}" class="me-3" alt="">
                     <div>
-                        <span class="font-size-16 font-weight-400 text-white">Reza Pahlevi</span>
-                        <span class="font-size-16 font-weight-400 text-white">+6281912368235</span>
+                        <span class="font-size-16 font-weight-400 text-white">+6287882118259</span>
                     </div>
                 </div>
-                <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">
-                    <img src="{{ asset('assets/landing/img/telephone-icon.svg') }}" class="me-3" alt="">
+                <div class="d-flex align-items-start justify-content-center justify-content-md-start mt-3">
+                    <img src="{{ asset('assets/landing/img/linkedin-icon.svg') }}" class="me-3 mt-1" alt="">
                     <div>
-                        <span class="font-size-16 font-weight-400 text-white">Widi Yatmoko</span>
-                        <span class="font-size-16 font-weight-400 text-white">+6287882118259</span>
+                        <span class="font-size-16 font-weight-400 text-white">https://www.linkedin.com/in/widi-yatmoko-2075bb23b/</span>
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">
                     <img src="{{ asset('assets/landing/img/email-icon.svg') }}" class="me-3" alt="">
-                    <span class="font-size-16 font-weight-400 text-white">innerjoy@gmail.com</span>
+                    <span class="font-size-16 font-weight-400 text-white">mokoindonesia45@gmail.com</span>
                 </div>
                 <div class="d-flex align-items-start justify-content-center justify-content-md-start mt-3">
                     <img src="{{ asset('assets/landing/img/location-icon.svg') }}" class="me-3 mt-1" alt="">
-                    <span class="font-size-16 font-weight-400 text-white">Address Line-1 <br> Address Line-2, <br> city, state-pin, code</span>
+                    <span class="font-size-16 font-weight-400 text-white">Tangerang</span>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-5 mt-md-0">
+                <h3 class="footer-title font-size-18 font-weight-600 text-white text-center text-md-start">Reza Pahlevi Kurniawan</h3>
+                <hr class="line d-block mx-auto mx-md-0 mt-0">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">
+                    <img src="{{ asset('assets/landing/img/telephone-icon.svg') }}" class="me-3" alt="">
+                    <div>
+                        <span class="font-size-16 font-weight-400 text-white">+6281912368235</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-start justify-content-center justify-content-md-start mt-3">
+                    <img src="{{ asset('assets/landing/img/linkedin-icon.svg') }}" class="me-3 mt-1" alt="">
+                    <div>
+                        <span class="font-size-16 font-weight-400 text-white">https://www.linkedin.com/in/reza-pahlevi-kurniawan/</span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start mt-3">
+                    <img src="{{ asset('assets/landing/img/email-icon.svg') }}" class="me-3" alt="">
+                    <span class="font-size-16 font-weight-400 text-white">rezapahlv31@gmail.com</span>
+                </div>
+                <div class="d-flex align-items-start justify-content-center justify-content-md-start mt-3">
+                    <img src="{{ asset('assets/landing/img/location-icon.svg') }}" class="me-3 mt-1" alt="">
+                    <span class="font-size-16 font-weight-400 text-white">Jakarta</span>
                 </div>
             </div>
         </div>

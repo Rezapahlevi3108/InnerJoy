@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         User::factory(1)->create();
         UserDetail::factory(1)->create();
         Sosmed::factory(1)->create();
-        Posting::factory(1)->create();
+        Posting::factory(8)->create();
         // Admin::factory(1)->create();
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',

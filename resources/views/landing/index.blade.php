@@ -14,21 +14,19 @@
         </div>
     </section>
 
-    <section>
+    <section id="tentang">
         <div class="bg-linear">
             <div class="container">
                 <div class="row padding-top-66 padding-bottom-66">
                     <div class="col-md-6 d-flex align-items-center">
                         <div>
-                            <h1 class="font-size-40 font-weight-600 color-primary-2">Ayo Sini...</h1>
-                            <p class="font-size-18 font-weight-400 mt-4" style="text-align: justify">
-                                Jangan kamu pendam sendiri...kami siap kok dengar cerita atau keluh kesah kamu. Banyak juga kok teman lainnya yang mungkin sama seperti kamu, mungkin kita bisa saling berbagi dan menguatkan. Kalo gitu...ayo gabung bareng kita. Kamu gk akan sendiri lagi deh
-                            </p>
+                            <h1 class="font-size-40 font-weight-600 color-primary-2">Kenalan Yuk...</h1>
+                            <p class="font-size-18 font-weight-400 mt-4" style="text-align: justify">Kami adalah media untuk berbagi cerita dan mendukung kesehatan mental. Di sini, setiap orang bebas bercerita tanpa ada tekanan darimanapun. Kami mendukung semua orang untuk saling mendengarkan, memahami, mendukung, dan berkembang bersama.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-none d-md-block mx-auto" width="380" alt="">
-                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-block d-md-none mx-auto mt-4" width="280" alt="">
+                        <img src="{{ asset('assets/landing/img/about-us.png') }}" class="d-none d-md-block mx-auto" width="350" alt="">
+                        <img src="{{ asset('assets/landing/img/about-us.png') }}" class="d-block d-md-none mx-auto mt-4" width="280" alt="">
                     </div>
                 </div>
             </div>
@@ -55,6 +53,27 @@
     </section>
 
     <section>
+        <div class="bg-linear margin-top-128">
+            <div class="container">
+                <div class="row padding-top-66 padding-bottom-66">
+                    <div class="col-md-6 d-flex align-items-center">
+                        <div>
+                            <h1 class="font-size-40 font-weight-600 color-primary-2">Ayo Sini...</h1>
+                            <p class="font-size-18 font-weight-400 mt-4" style="text-align: justify">
+                                Jangan pendam sendiri, ada banyak teman lain yang mungkin mengalami hal yang sama dan siap mendengarkan cerita atau keluh kesah kamu. Kita bisa saling berbagi pengalaman dan saling menguatkan juga loh. Kalo gitu...ayo gabung bareng kami. Kamu ga akan sendiri lagi deh.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-none d-md-block mx-auto" width="380" alt="">
+                        <img src="{{ asset('assets/landing/img/hugs.png') }}" class="d-block d-md-none mx-auto mt-4" width="280" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- <section>
         <div class="bg-linear margin-top-128">
             <div class="container">
                 <div class="row padding-top-66 padding-bottom-66">
@@ -87,5 +106,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection
