@@ -1,66 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# InnerJoy
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<h2>Screenshot</h2>
+<p>Landing Page</p>
 
-## About Laravel
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/91c08be5-9696-4b19-b944-6fd123552e58)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p>Dashboard Page</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/2655c1b9-2ff0-48e4-82fc-0ced5851a871)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<p>Register Page</p>
 
-## Learning Laravel
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/00d8b5ea-2255-4e51-b43d-d4248fde5811)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p>Login Page</p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/50b35a11-2c5f-49b5-b622-51c866719f0d)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p>User Dashboard Page</p>
 
-## Laravel Sponsors
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/4a69963f-b854-4b24-8ea3-d2279056e826)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<p>Create Posting Page</p>
 
-### Premium Partners
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/b1f5f10d-7f39-497c-9728-32dfdf2da09d)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<p>User Profile Page</p>
 
-## Contributing
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/aa05bf70-e893-4904-a8d4-827267355569)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<p>Dashboard Admin Page</p>
 
-## Code of Conduct
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/ea1566e3-854e-4ba7-b6aa-bf0cec45aa2b)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<p>Manage Admin Page</p>
 
-## Security Vulnerabilities
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/2f466d82-13c2-4938-8196-5908863072ac)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<p>Modal Edit Data</p>
 
-## License
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/9928b81f-9deb-4720-bf05-2039666a7d2c)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>Manage User Page</p>
+
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/dec96676-1634-450a-a067-d9527a330bd3)
+
+<p>Manage Posting Page</p>
+
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/1daf31d9-2fd4-48ee-b069-0826ff502289)
+
+<p>Admin Profile Page</p>
+
+![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/fead9689-94b8-4de0-811f-06a6a28dc76c)
