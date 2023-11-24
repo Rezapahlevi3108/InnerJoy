@@ -1,6 +1,16 @@
 # InnerJoy
+InnerJoy is a blog web application for sharing personal stories about mental health.
 
-<h2>Screenshot</h2>
+## Tech
+- Laravel
+- jQuery
+- HTML
+- CSS
+- Bootstrap
+- XAMPP
+- MySQL
+
+## Screenshot
 <p>Landing Page</p>
 
 ![image](https://github.com/Rezapahlevi3108/InnerJoy/assets/111274882/91c08be5-9696-4b19-b944-6fd123552e58)
